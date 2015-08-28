@@ -1,0 +1,10 @@
+framework module SUSDK {
+  umbrella header "SUSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module SUSDK.Swift {
+    header "SUSDK-Swift.h"
+}

@@ -1,13 +1,6 @@
-//
-//  AppDelegate.swift
-//  Sample
-//
-//  Created by Ittai Svidler on 8/28/15.
-//  Copyright (c) 2015 Saturnup. All rights reserved.
-//
-
 import UIKit
 import CoreData
+import SUSDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +9,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        SUSDK.setAPIKey("YOUR_API_KEY")
         // Override point for customization after application launch.
         return true
     }

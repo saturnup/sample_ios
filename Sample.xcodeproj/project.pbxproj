@@ -14,6 +14,8 @@
 		7D47A8701B910CEA007974E7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D47A86F1B910CEA007974E7 /* Images.xcassets */; };
 		7D47A8731B910CEA007974E7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D47A8711B910CEA007974E7 /* LaunchScreen.xib */; };
 		7D47A87F1B910CEA007974E7 /* SampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D47A87E1B910CEA007974E7 /* SampleTests.swift */; };
+		7D47A8941B91163B007974E7 /* SUSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D47A8931B91163B007974E7 /* SUSDK.framework */; };
+		7D47A8951B911654007974E7 /* SUSDK.framework in Embed Frameworks (1 item) (1 item) */ = {isa = PBXBuildFile; fileRef = 7D47A8931B91163B007974E7 /* SUSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +27,20 @@
 			remoteInfo = Sample;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7D47A88C1B910D0E007974E7 /* Embed Frameworks (1 item) (1 item) */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7D47A8951B911654007974E7 /* SUSDK.framework in Embed Frameworks (1 item) (1 item) */,
+			);
+			name = "Embed Frameworks (1 item) (1 item)";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		7D47A8601B910CEA007974E7 /* Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +54,7 @@
 		7D47A8781B910CEA007974E7 /* SampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D47A87D1B910CEA007974E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D47A87E1B910CEA007974E7 /* SampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTests.swift; sourceTree = "<group>"; };
+		7D47A8931B91163B007974E7 /* SUSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SUSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D47A8941B91163B007974E7 /* SUSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +79,7 @@
 		7D47A8571B910CEA007974E7 = {
 			isa = PBXGroup;
 			children = (
+				7D47A8931B91163B007974E7 /* SUSDK.framework */,
 				7D47A8621B910CEA007974E7 /* Sample */,
 				7D47A87B1B910CEA007974E7 /* SampleTests */,
 				7D47A8611B910CEA007974E7 /* Products */,
@@ -125,6 +144,7 @@
 				7D47A85C1B910CEA007974E7 /* Sources */,
 				7D47A85D1B910CEA007974E7 /* Frameworks */,
 				7D47A85E1B910CEA007974E7 /* Resources */,
+				7D47A88C1B910D0E007974E7 /* Embed Frameworks (1 item) (1 item) */,
 			);
 			buildRules = (
 			);
@@ -343,7 +363,12 @@
 		7D47A8831B910CEA007974E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Sample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -353,7 +378,12 @@
 		7D47A8841B910CEA007974E7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Sample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -413,6 +443,7 @@
 				7D47A8841B910CEA007974E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7D47A8851B910CEA007974E7 /* Build configuration list for PBXNativeTarget "SampleTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +452,7 @@
 				7D47A8871B910CEA007974E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
