@@ -2,18 +2,10 @@
 Sample iOS application demonstration the Saturnup SDK
 
 #Integration Quick Start
-Integration with the Saturnup SDK can be done in one of two ways: manually installing the .framework directory in xcode, or through Cocoapods. 
-
-#### Download the framework file
 The Saturnup SDK is packaged in just a single .framework directory. Just drag and drop the SUSDK.framework directory into your project, and install it just like any other framework.
+The framework can be downloaded from https://s3.amazonaws.com/downloads.saturnup.com/ios/com.saturnup.sdk.ios/SUSDK.framework.zip
 
-#### Cocoapods
-The Saturnup SDK is also available via Cocoapods. Just add `pod 'Saturnup'` to your Podfile and you're good to go!
-
-
-
-Then simply import the SUSDK framework in files using the SDK.
-```import SUSDK```
+Then simply import the SUSDK framework at the top of relevant files using `import SUSDK`.
 
 In the application delegate set your API key in the application didFinishLaunchingWithOptions function
 ```
